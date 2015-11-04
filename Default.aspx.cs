@@ -18,14 +18,22 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
-
     protected void buttonCalculateClick(object sender, EventArgs e)
     {
-        int monthlyInvestment = int.Parse(dropdownMonthlyInvestment.SelectedValue);
-        float interestRate = float.Parse(textBoxInterestRate.Text.ToString()) / 100;
-        int numYears = int.Parse(textBoxYears.Text.ToString());
-        float result = monthlyInvestment * interestRate * 12 * numYears;
-        labelResult.Text = result.ToString();
+        int a = int.Parse(dropdownMonthlyInvestment.SelectedValue);
+        float b = float.Parse(textBoxInterestRate.Text.ToString());
+        int c = int.Parse(textBoxYears.Text.ToString());
+        var i = (b / 100) / 12;
+        var n = c * 12;
+        var v = 1 / (1 + i);
+
+        var z = Math.Pow((1 + i), n);
+        var w = Math.Pow(v, n);
+
+        var totala = a * ((1 - w) / i) * (1 + i) * z;
+        var totalamt = a * n;
+        var totalint = totala - totalamt;
+        labelResult.Text = (totala).ToString();
     }
 
     protected void buttonClearClick(object sender, EventArgs e)

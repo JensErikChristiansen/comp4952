@@ -155,10 +155,6 @@ publish/
 csx/
 *.build.csdef
 
-# Windows Azure Emulator
-efc/
-rfc/
-
 # Windows Store app package directory
 AppPackages/
 
@@ -228,17 +224,3 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-
-*.tmp
-
-# Word temporary
-~$*.doc*
-
-# Excel temporary
-~$*.xls*
-
-# Excel Backup File
-*.xlk
-
-# PowerPoint temporary
-~$*.ppt*
