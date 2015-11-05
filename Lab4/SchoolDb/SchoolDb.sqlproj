@@ -7,7 +7,7 @@
     <Name>SchoolDb</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{7ef9f78b-8a57-4994-8598-2a25fe78b108}</ProjectGuid>
+    <ProjectGuid>{b1a38868-fc03-4cb1-b060-61fad3280240}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureDatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -60,8 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Student.sql" />
-    <Build Include="Course.sql" />
-    <Build Include="CourseRegistration.sql" />
     <Build Include="Program.sql" />
+    <Build Include="CourseRegistration.sql" />
+    <Build Include="Course.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>
